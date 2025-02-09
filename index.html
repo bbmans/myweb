@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 추첨기</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- 아이콘 설정 -->
+    <link rel="icon" href="icon-192x192.png">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <!-- 테마 색상 -->
+    <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+    <h1>🎰 로또 번호 알라미 🎰</h1>
+    <div class="timer-container">
+        <div class="timer" id="timer">00:00:00</div>
+        <div class="controls">
+            <button onclick="addTime(60)">1분 추가</button>
+            <button onclick="addTime(300)">5분 추가</button>
+            <button onclick="addTime(3600)">1시간 추가</button> <br>
+            <button onclick="startTimer()">알람시작</button>
+            <button onclick="pauseTimer()">알람정지</button>
+            <button onclick="resetTimer()">타이머 초기화</button>
+        </div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+    <div class="ad">구글 애드몹 광고</div>
+    <div class="lotto-container">
+        <h2>저장된 추첨 번호 <button onclick="clearAll()">전체 삭제</button></h2>
+        <ul class="lotto-list" id="lottoList"></ul>
+    </div>
+    <script src="script.js"></script>
+    <!-- 서비스 워커 등록 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('Service Worker 등록 성공:', registration);
+                })
+                .catch((error) => {
+                    console.log('Service Worker 등록 실패:', error);
+                });
+        }
+    </script>
+</body>
+</html>
