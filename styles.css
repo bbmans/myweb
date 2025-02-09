@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.ad {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ddd;
+    width: 100%;
+}
+
+.lotto-container {
+    text-align: center;
+    width: 100%;
+}
+
+.lotto-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.lotto-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lotto-list li .numbers span {
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.yellow { background-color: rgb(165, 165, 9); color: black; }
+.sky { background-color: skyblue; }
+.red { background-color: red; }
+.gray { background-color: gray; }
+.green { background-color: green; }
